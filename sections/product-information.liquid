@@ -12,6 +12,12 @@
     assign product_has_media = false
   endif
 
+
+  assign product_has_media = true
+  if section.settings.product.media.size == 0
+    assign product_has_media = false
+  endif
+
   assign product_grid_class = 'product-information__grid'
 
   if product_has_media == false
